@@ -1,5 +1,3 @@
-#require 'net/smtp'
-
 class Email
 
   def initialize

@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/flash'
 require './lib/email.rb'
+require 'net/smtp'
 
 class EmailApp < Sinatra::Base
     
