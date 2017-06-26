@@ -1,0 +1,13 @@
+body {
+	font-family: Helvetica, Arial, Geneva, sans-serif;
+	padding: 2em;
+	border: 8px solid teal;
+}
+
+span.error {
+  color: red;
+}
+
+span.message {
+    color: green;
+}

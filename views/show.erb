@@ -1,0 +1,25 @@
+<% if flash[:error_msg] %>
+    <p>
+    <span class="error"><%= flash[:error_msg] %></span>
+    </p>
+<% end %>
+
+<% if flash[:message] %>
+    <p>
+    <span class="message"><%= flash[:message] %></span>
+    </p>
+<% end %>
+
+<form method="post" action="/send">
+  <p>Your name:</p>
+  <input type="text" name="sender" value=<%=@email.sender%>>
+  <p>Receiver's name:</p>
+  <input type="text" name="receiver" value=<%=@email.receiver%>>
+  <p>Receiver's email address:</p>
+  <input type="text" name="to_address" value=<%=@email.to_address%>>
+  <p>Subject of your message:</p>
+  <input type="text" name="subject" value=<%=@email.subject%>>
+  <p>Your message:</p>
+  <textarea input type="text" name="message_text" cols="40" rows="5"><%=@email.message%></textarea>
+  <p><input type="submit" value="send"> <input type="submit" formaction="/clear" value="clear"></p>
+</form>
